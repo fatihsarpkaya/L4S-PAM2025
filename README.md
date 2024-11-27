@@ -17,29 +17,18 @@ To run this experiment on [FABRIC](https://fabric-testbed.net), you should have 
 
 To reproduce our experiments on FABRIC, log in to the FABRIC testbed's JupyterHub environment. Open a new terminal from the launcher, and run:
 
-> git clone https://github.com/fatihsarpkaya/L4S.git
+> git clone https://github.com/fatihsarpkaya/L4S-PAM2025.git
 
-In order to get the results for Prague throughput and Prague queueing delay heatmaps, run the `single_bottleneck.ipynb` notebook. 
+For single flow experiments, run the `single_flow_experiments.ipynb` notebook. For multiple flow experiments, run the `multiple_flow_experiments.ipynb` notebook. In each notebook, you will find additional instructions that require careful attention. Please read and follow the instructions in the notebook thoroughly. Using this notebook structure, you can collect data for all the figures in the paper except Figures 1, 2, 23, and 24.
 
-In this notebook, the experiment parameters are chosen as following.
-```
- exp_factors = {
-    'n_bdp': [0.5, 1, 2, 4, 8],  # n x bandwidth delay product
-    'btl_capacity': [100], #in Mbps 
-    'base_rtt': [10], # in ms 
-    'aqm': ['FIFO', 'single_queue_FQ', 'Codel', 'FQ', 'FQ_Codel', 'DualPI2'],
-    'ecn_threshold': [5], # in ms 
-    'ecn_fallback': [0],  #fallback algorithm, TCP Prague falls back to classic TCP when it detects single queue classic ECN bottleneck # 0: OFF, 1: ON  
-    'rx_L4S_ecn': [3],  # 0: noecn, 1: ecn, 3: accecn 
-    'rx_legacy_ecn': [0],  # 0: noecn, 1: ecn 
-    'cc_tx_L4S': ["prague"],
-    'cc_tx_legacy': ["cubic"],
-    'trial': [1,2,3,4,5,6,7,8,9,10]
-}
-```
+Upon completing the notebook execution, you should have JSON files containing the collected data. Make sure the JSON file names follow the naming rules given in the notebook. This is necessary for compatibility with our plotting notebooks. Otherwise, you will need to modify the plotting notebooks accordingly.
 
-The original results were obtained from 10 trials per experiment, with each experiment lasting 60 seconds. To save time, you may consider reducing the experiment duration. While this shorter duration might not be sufficient for accurate measurements, it should provide a general idea about the throughput and queueing delay.
+## Reproducing the figures
 
-As mentioned before, the paramaters and the experiment duration could be changed as needed.
+You can use our experiment data to generate the figures in our paper.
 
-Upon completion of the notebook execution, the plots will be saved and displayed at the end of the notebook.
+For single flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/144W52M-DYqU4VCy16-awcut1FNxQ3TUx?usp=sharing)
+For multiple flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nHuICo_XSbjH0UnBhc2ic_IoRnzh2T0d?usp=sharing)
+
+In these notebooks, we download our experiment data from Google Drive and plot the figures accordingly. You can also modify the notebooks to use your own experiment data to create your plots.
+
