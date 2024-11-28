@@ -19,7 +19,7 @@ To reproduce our experiments on FABRIC, log in to the FABRIC testbed's JupyterHu
 
 > git clone https://github.com/fatihsarpkaya/L4S-PAM2025.git
 
-For single flow experiments, run the `single_flow_experiments.ipynb` notebook. For multiple flow experiments, run the `multiple_flow_experiments.ipynb` notebook. In each notebook, you will find additional instructions that require careful attention. Please read and follow the instructions in the notebook thoroughly. Using this notebook structure, you can collect data for all the figures in the paper except Figures 1, 2, 23, and 24.
+For single flow experiments, run the `single_flow_experiments.ipynb` notebook. For multiple flow experiments, run the `multiple_flow_experiments.ipynb` notebook. In each notebook, you will find additional instructions that require careful attention. Please read and follow the instructions in the notebook thoroughly. Using this notebook structure, you can collect data for all the figures in the paper except Figures 1, and 2.
 
 Upon completing the notebook execution, you should have JSON files containing the collected data. Make sure the JSON file names follow the naming rules given in the notebook. This is necessary for compatibility with our plotting notebooks. Otherwise, you will need to modify the plotting notebooks accordingly.
 
