@@ -17,9 +17,9 @@ To run this experiment on [FABRIC](https://fabric-testbed.net), you should have 
 
 You can use our experiment data to generate the figures in our paper.
 
-For single flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/144W52M-DYqU4VCy16-awcut1FNxQ3TUx?usp=sharing)
+For single flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/144W52M-DYqU4VCy16-awcut1FNxQ3TUx?usp=sharing](https://colab.research.google.com/github/fatihsarpkaya/L4S-PAM2025/blob/main/plotting-notebooks/1vs1.ipynb))
 
-For multiple flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nHuICo_XSbjH0UnBhc2ic_IoRnzh2T0d?usp=sharing)
+For multiple flow experiments follow this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/1nHuICo_XSbjH0UnBhc2ic_IoRnzh2T0d?usp=sharing](https://colab.research.google.com/github/fatihsarpkaya/L4S-PAM2025/blob/main/plotting-notebooks/multiple_flows.ipynb))
 
 In these notebooks, we download our experiment data from Google Drive and plot the figures accordingly. You can also modify the notebooks to use your own experiment data to create your plots.
 
