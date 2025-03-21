@@ -13,7 +13,7 @@ This repository includes:
 
 To run this experiment on [FABRIC](https://fabric-testbed.net), you should have a FABRIC account with keys configured, and be part of a FABRIC project. You will need to have set up SSH keys and understand how to use the Jupyter interface in FABRIC.
 
-## Reproducing the figures
+## Reproducing the Figures
 
 You can use our experiment data to generate the figures in our paper.
 
@@ -33,3 +33,9 @@ For single flow experiments, run the `single_flow_experiments.ipynb` notebook. F
 
 Upon completing the notebook execution, you should have JSON files containing the collected data. Make sure the JSON file names follow the naming rules given in the notebook. This is necessary for compatibility with our plotting notebooks. Otherwise, you will need to modify the plotting notebooks accordingly.
 
+
+
+## Important Note on DualPI2 Configuration in the Results
+
+In the paper, the size of the DualPI2 queue is configured with the default parameter of 10,000 packets (approximately 12 BDP in our settings), even though the heatmaps show different buffer sizes on the x-axis. Since the ECN threshold is set to 5 ms in the classic queue and 1 ms in the low-latency queue — and non-ECN packets are dropped — adjusting the queue size for lower BDP values does not significantly affect the results for CUBIC and BBRv1.
+However, for BBRv2 and BBRv3, we observe better fairness (rather than BBR dominance) at 0.5 BDP and 1 BDP buffer sizes in most cases. For buffer sizes of 2 BDP and larger, the trends remain consistent with the default configuration as shown in the paper.
